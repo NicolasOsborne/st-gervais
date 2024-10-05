@@ -36,12 +36,10 @@ const Menu: FC<MenuProps> = (props) => {
             <div className="uam_headerMenu_linkList">
               <ul className="uam_headerMenu_mainLink">
                 <li>
-                  <Link href="#" className="uam_headerMenuLink"> Domain </Link>
+                  <Link href="#" className="uam_headerMenuLink"> Domaine </Link>
                 </li>
                 <li>
-                  <Link href="#" className="uam_headerMenuLink">
-                    Info Live
-                  </Link>
+                  <Link href="#" className="uam_headerMenuLink"> Infos Live </Link>
                 </li>
                 <li>
                   <Link href="#" className="uam_headerMenuLink"> Webcams </Link>
@@ -50,9 +48,7 @@ const Menu: FC<MenuProps> = (props) => {
                   <Link href="#" className="uam_headerMenuLink"> Tarifs </Link>
                 </li>
                 <li>
-                  <Link href="#" className="uam_headerMenuLink">
-                    Débutants
-                  </Link>
+                  <Link href="#" className="uam_headerMenuLink"> Débutants </Link>
                 </li>
               </ul>
             </div>
@@ -70,12 +66,19 @@ const Menu: FC<MenuProps> = (props) => {
             <span className="label_name">Langue</span>
           </div>
           <div className="uam_header_account">
-            <span className="icon"></span>
-            <span> Mon Compte </span>
+          <Image
+              src="images/user.svg"
+              className="lang_flag"
+              alt='user account' 
+              width={25}
+              height={25}
+              />
+            <span className="label_name"> Compte </span>
           </div>
           <div className="uam_header_cart">
             <span className="icon"></span>
-            <span> Mon Panier </span>
+            <div className='cart_badge'>4</div>
+            <span className="label_name"> Panier </span>
           </div>
         </div>
       </div>
