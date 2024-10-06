@@ -22,4 +22,12 @@
       row-gap: 18px;
     }
   }
+
+  @media screen and (min-width: 700px) and (max-width: $screen-m) {
+    margin-top: 87px;
+
+    &_logoList {
+      flex-wrap: nowrap;
+    }
+  }
 }

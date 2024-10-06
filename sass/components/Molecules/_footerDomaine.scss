@@ -10,8 +10,12 @@
   &_description {
     margin-top: 20px;
 
+    strong {
+      @include fontStyle(600, 16px, 26px);
+    }
+    
     p {
-      @include fontSize(15px, 24px);
+      @include fontStyle(400, 16px, 26px);
 
       &:last-child {
         margin-bottom: 0;
@@ -27,9 +31,18 @@
     &_description {
       margin-top: 8px;
 
-      p {
-        @include fontSize(16px, 26px);
+      strong {
+        @include fontStyle(700, 16px, 26px);
       }
+    }
+  }
+
+  @media screen and (min-width: 700px) and (max-width: $screen-s) {
+    &_description {
+
+      p {
+        max-width: 255px;
+      }      
     }
   }
 }

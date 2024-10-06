@@ -36,6 +36,8 @@
   }
 
   &_copyright {
+    @include fontStyle(400, 16px, 26px);
+
     span {
       display: block;
       margin-bottom: 8px;
@@ -50,6 +52,30 @@
     &_socialNetworksLinks {
       justify-content: flex-end;
       column-gap: 16px;
+      margin-right: 76px;
+      // margin-top: -64px
+    }
+
+    &_line {
+      height: 29px;
+      margin-top: 15px;
+
+      &::before {
+        width: auto;
+        left: 0;
+        right: 1px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        height: 29px;
+        width: 36px;
+        background-image: url('../../../public/images/Fleches.svg');
+        background-position: right center;
+        background-repeat: no-repeat;
+      }
     }
 
     &_copyright {
@@ -67,6 +93,12 @@
     }
   }
 
+  @media screen and (min-width: 700px) and (max-width: $screen-m) {
+    &_socialNetworksLinks {
+      margin-top: -65px;
+    }
+  }
+
   @media screen and (min-width: $screen-m-min) {
     position: relative;
     display: flex;
@@ -75,6 +107,7 @@
     &_socialNetworksLinks {
       order: 2;
       flex-wrap: nowrap;
+      margin-right: 44px;
     }
 
     &_line {

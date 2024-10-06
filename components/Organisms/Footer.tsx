@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 export interface FooterProps { }
 
-const Footer: FC<FooterProps> = (props) => {
+const Footer: FC<FooterProps> = () => {
 
   return (
     <div className="uam_footer">
@@ -40,7 +40,7 @@ const Footer: FC<FooterProps> = (props) => {
                     <Image
                       className="uam_footerPayment_logo"
                       alt='visa'
-                      src="images/visa-card-1.png"
+                      src="images/visa-card-2.png"
                       width={42}
                       height={30}
                     />
@@ -151,7 +151,7 @@ const Footer: FC<FooterProps> = (props) => {
                 <span className="js-cookie extraBottom-cookie">
                   Paramétrez vos cookies
                 </span>
-                <span> Made with ♡ by Un autre monde </span>
+                <span> Made with ♡ by UAM 2022 </span>
               </div>
             </div>
           </div>

@@ -15,17 +15,17 @@
     z-index: 2;
   }
 
-  &_content {
-    margin-bottom: 32px;
-  }
+  // &_content {
+  //   margin-bottom: -64px;
+  // }
 
   &_information {
     margin-bottom: 36px;
   }
 
-  &_domaine {
-    margin-bottom: 24px;
-  }
+  // &_domaine {
+  //   margin-bottom: 87px;
+  // }
 
   &_payment {
     margin-top: 24px;
@@ -70,7 +70,7 @@
     }
   }
 
-  @media screen and (min-width: $screen-s-min) {
+  @media screen and (min-width: 700px) {
     text-align: left;
 
     &_content {
@@ -89,6 +89,7 @@
       display: flex;
       justify-content: flex-end;
       column-gap: 16px;
+      padding-top: 15px;
     }
 
     &_triangle {
@@ -96,12 +97,20 @@
         border-bottom-width: 400px;
       }
     }
+
+    // &_payment {
+    //   margin-top: 87px;
+    // }
   }
 
   @media screen and (min-width: $screen-m-min) {
     &_links {
       column-gap: 25%;
     }
+
+    // &_domaine {
+    //   margin-bottom: 25px;
+    // }
   }
 
   @media screen and (min-width: $screen-l-min) {
