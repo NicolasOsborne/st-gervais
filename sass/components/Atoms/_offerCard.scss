@@ -1,0 +1,170 @@
+.uam_offerCard {
+    width: 253px;
+    height: 525px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: $color-white;
+    box-shadow: 4px 4px 10px rgba(17, 17, 17, 0.1);
+
+    &_titleWrapper {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 90px;
+        color: $color-white;
+        padding-top: 14px;
+        padding-left: 20px;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: rgba(0, 0, 0, 0.3);
+            filter: blur(5px);
+        }
+
+        &_title {
+            font-family: $font-Teko;
+            text-transform: uppercase;
+            @include fontStyle(700, 20px, 20px);
+            margin-bottom: 2px;
+        }
+
+        &_subtitle {
+            font-family: $font-Montserrat;
+            @include fontStyle(400, 16px, 20px);
+        }
+
+        em {
+            font-family: $font-Montserrat;
+            @include fontStyle(400, 14px, 20px);
+            font-style: italic;
+        }
+    }
+
+    .img-offerCard {
+        width: 253px;
+        height: 270px;
+        object-fit: cover;
+    }
+
+    &_button {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        gap: 10px;
+        background-color: $color-orange;
+        color: $color-white;
+        border: none;
+        outline: none;
+
+        .site-icon {
+            &::before {
+                content: $site-cart;
+                font-size: 24px;
+            }
+        }
+
+        .button_label {
+            font-family: $font-Montserrat;
+            @include fontStyle(700, 18px, 25px);
+        }
+    }
+
+    &_descriptionContainer {
+        margin: 12px 20px;
+        height: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &_description {
+            font-family: $font-Montserrat;
+            @include fontStyle(400, 16px, 26px);
+        }
+
+        &_price {
+            border-top: solid 1px $color-grey-eb;
+            padding-top: 12px;
+
+            .prices {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                .new-price {
+                    font-family: $font-Montserrat;
+                    @include fontStyle(700, 20px, 32px);
+                }
+        
+                .old-price {
+                    font-family: $font-Montserrat;
+                    @include fontStyle(400, 18px, 20px);
+                    text-decoration-line: line-through;
+                }
+            }
+
+            .site-icon {
+                display: none;
+            }
+        }
+    }
+    
+    @media screen and (min-width: $screen-xs) {
+        width: 305px;
+
+        .img-offerCard {
+            width: 305px;
+        }
+    }
+
+    @media screen and (min-width: $screen-m) {
+        width: 400px;
+        height: 560px;
+
+        .img-offerCard {
+            width: 400px;
+            height: 396px;
+        }
+
+        &_button {
+            display: none;
+        }
+
+        &_descriptionContainer_price {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .new-price {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            .old-price {
+                font-size: 16px;
+                line-height: 26px;
+                margin-left: 16px;
+            }
+
+            .site-icon {
+                display: block;
+                &::before {
+                    content: $site-cart;
+                    font-size: 24px;
+                    color: $color-orange;
+                }
+            }
+        }
+    }
+}
