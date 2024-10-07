@@ -48,7 +48,7 @@
   }
 
   &_description {
-    max-width: 345px;
+    max-width: 550px;
     font-family: $font-Montserrat;
     @include fontStyle(400, 16px, 26px);
     margin-bottom: 10px;
@@ -59,12 +59,255 @@
     flex-direction: row;
     gap: 11px;
     flex-wrap: wrap;
+    height: 45px;
+  }
+
+  &:first-child {
+    > * {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .uam_spotlight_buttonContainer {
+      justify-content: flex-end;
+    }
+  }
+
+  &:last-child {
+    .discount_button {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 370px) {
     &_image_alignRight,
     &_image_alignLeft {
       max-width: calc(100vw - 15px);
+    }
+  }
+
+  @media screen and (min-width: 740px) {
+    display: grid;
+
+    &:first-child {
+      grid-template-columns: 1fr 362px;
+      grid-auto-rows: auto;
+
+      > * {
+        text-align: left;
+      }
+
+      .uam_spotlight_name {
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 0;
+      }
+
+      .uam_spotlight_tag {
+        grid-column: 1;
+        grid-row: 2;
+        margin-left: 0;
+      }
+
+      .uam_spotlight_title {
+        grid-column: 1;
+        grid-row: 3;
+        margin-left: 0;
+      }
+
+      .uam_spotlight_description {
+        grid-column: 1;
+        grid-row: 4;
+        margin-left: 0;
+      }
+
+      .uam_spotlight_buttonContainer {
+        grid-column: 1;
+        grid-row: 5;
+        margin-left: 0;
+        justify-content: flex-start;
+        margin-bottom: 60px;
+      }
+
+      .uam_spotlight_image_alignRight {
+        grid-column: 2;
+        grid-row: 3 / 6;
+        width: 362px;
+        height: 350px;
+        object-position: 100% 100%;
+      }
+    }
+
+    &:last-child {
+      grid-template-columns: 362px 1fr;
+      grid-auto-rows: auto;
+
+      > * {
+        margin-right: 0;
+        text-align: left;
+      }
+
+      .uam_spotlight_name {
+        grid-column: 2;
+        grid-row: 1;
+        margin-left: 0;
+        margin-top: 59px;
+      }
+
+      .uam_spotlight_tag {
+        grid-column: 2;
+        grid-row: 2;
+        margin-left: 0;
+      }
+
+      .uam_spotlight_title {
+        grid-column: 2;
+        grid-row: 3;
+        margin-left: 0;
+      }
+
+      .uam_spotlight_description {
+        grid-column: 2;
+        grid-row: 4;
+        margin-left: 0;
+      }
+
+      .uam_spotlight_buttonContainer {
+        grid-column: 2;
+        grid-row: 5;
+        margin-left: 0;
+
+        .discount_button {
+          display: block;
+        }
+      }
+
+      .uam_spotlight_image_alignLeft {
+        grid-column: 1;
+        grid-row: 1 / 6;
+        width: 362px;
+        height: 350px;
+        object-position: 100% 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-m) {
+    &:first-child {
+      margin-left: 100px;
+    }
+
+    &:last-child {
+      margin-right: 100px;
+    }
+  }
+
+  @media screen and (min-width: $screen-l) {
+    .uam_spotlight_name {
+      @include fontStyle(800, 16px, 20px);
+    }
+
+    .uam_spotlight_tag {
+      @include fontStyle(700, 20px, 32px);
+      height: 52px;
+    }
+
+    .uam_spotlight_title {
+      @include fontStyle(700, 35px, 45px);
+      max-width: 484px;
+    }
+
+    .uam_spotlight_description {
+      @include fontStyle(400, 22px, 32px);
+    }
+
+    .uam_button {
+      @include fontStyle(700, 18px, 25px);
+    }
+
+    &:first-child {
+      grid-template-columns: 1fr 710px;
+      margin-left: 100px;
+
+      .uam_spotlight_name {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .uam_spotlight_tag {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .uam_spotlight_title {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      .uam_spotlight_description {
+        grid-column: 1;
+        grid-row: 4;
+      }
+
+      .uam_spotlight_buttonContainer {
+        grid-column: 1;
+        grid-row: 5;
+        justify-content: flex-start;
+        margin-bottom: 60px;
+      }
+
+      .uam_spotlight_image_alignRight {
+        grid-column: 2;
+        grid-row: 3 / 6;
+        width: 710px;
+        height: 540px;
+        object-position: 100% 100%;
+      }
+    }
+
+    &:last-child {
+      grid-template-columns: 710px 1fr;
+      margin-right: 100px;
+      margin-top: -20px;
+
+      .uam_spotlight_name {
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 59px;
+      }
+
+      .uam_spotlight_tag {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      .uam_spotlight_title {
+        grid-column: 2;
+        grid-row: 3;
+        width: 484px;
+      }
+
+      .uam_spotlight_description {
+        grid-column: 2;
+        grid-row: 4;
+      }
+
+      .uam_spotlight_buttonContainer {
+        grid-column: 2;
+        grid-row: 5;
+
+        .discount_button {
+          display: none;
+        }
+      }
+
+      .uam_spotlight_image_alignLeft {
+        grid-column: 1;
+        grid-row: 1 / 6;
+        width: 710px;
+        height: 540px;
+        object-position: 100% 100%;
+      }
     }
   }
 }

@@ -13,7 +13,7 @@ export interface SpotlightProps {
 }
 
 const Spotlight: FC<SpotlightProps> = (props) => {
-  const { name, tag, title, imageSrc, imageAlt, imageClassName, description } =
+  const { name, tag, title, description, imageSrc, imageAlt, imageClassName } =
     props;
   return (
     <div className="uam_spotlight">

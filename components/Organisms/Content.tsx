@@ -20,13 +20,12 @@ const Content: FC<ContentProps> = (props) => {
           name="Idée cadeau"
           tag="Forfait ski 4h & Spa Thermal"
           title="Glissez dans un écrin de bien-être"
+          description="Une journée d'escapade entre grands espaces de glisse et eau thermale à 39°C du Mont Revait. Tous les bienfaits de Saint-Michel dans un seul forfait. Le nouvel espace bien être des Thermes de Saint-Michel vous invite à une expérience..."
           imageSrc="/images/produit5.jpg"
           imageAlt="Femme profitant de l'eau thermale"
           imageClassName="uam_spotlight_image_alignLeft"
-          description="Une journée d'escapade entre grands espaces de glisse et eau thermale à 39°C au Mont Revait. Tous les bienfaits de Saint-Michel dans un seul forfait. Le nouvel espace bien être des Thermes de Saint-Michel vous invite à une expérience..."
         />
       </div>
-      {/* <div className="uam_contentWrapper_triangle"></div> */}
     </>
   );
 };
