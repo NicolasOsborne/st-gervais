@@ -1,17 +1,15 @@
 import OfferList from "~components/Molecules/OfferList";
-import Layout from "~template/Layout"
+import Content from "~components/Organisms/Content";
+import Layout from "~template/Layout";
 
 interface HomePageProps {}
 
-
 const HomePage = (props: HomePageProps) => {
-
   return (
     <Layout>
-      {/* <OfferList /> */}
-      Code
+      <Content />
     </Layout>
   );
-}
+};
 
 export default HomePage;

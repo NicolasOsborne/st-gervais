@@ -1,0 +1,70 @@
+.uam_spotlight {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &_name {
+    font-family: $font-Montserrat;
+    @include fontStyle(800, 14px, 20px);
+    color: $color-blue;
+    text-transform: uppercase;
+  }
+
+  &_tag {
+    width: fit-content;
+    padding: 10px 20px;
+    color: $color-white;
+    background-color: $color-blue;
+    font-family: $font-Montserrat;
+    @include fontStyle(700, 16px, 22px);
+    margin-bottom: 10px;
+  }
+
+  &_title {
+    font-family: $font-Eagle;
+    @include fontStyle(700, 25px, 35px);
+    text-transform: uppercase;
+    max-width: 345px;
+  }
+
+  &_image_alignRight {
+    width: 360px;
+    height: 209px;
+    border-top-left-radius: 270px;
+    border-bottom-left-radius: 270px;
+    object-fit: cover;
+    object-position: 100% 80%;
+    margin-right: -15px;
+  }
+
+  &_image_alignLeft {
+    width: 360px;
+    height: 209px;
+    border-top-right-radius: 270px;
+    border-bottom-right-radius: 270px;
+    object-fit: cover;
+    object-position: 100% 80%;
+    margin-left: -15px;
+  }
+
+  &_description {
+    max-width: 345px;
+    font-family: $font-Montserrat;
+    @include fontStyle(400, 16px, 26px);
+    margin-bottom: 10px;
+  }
+
+  &_buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 370px) {
+    &_image_alignRight,
+    &_image_alignLeft {
+      max-width: calc(100vw - 15px);
+    }
+  }
+}

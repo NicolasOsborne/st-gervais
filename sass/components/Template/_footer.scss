@@ -8,24 +8,16 @@
   background-color: transparent;
   padding-bottom: 31px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 0px;
 
   &_container {
     position: relative;
     z-index: 2;
   }
 
-  // &_content {
-  //   margin-bottom: -64px;
-  // }
-
   &_information {
     margin-bottom: 36px;
   }
-
-  // &_domaine {
-  //   margin-bottom: 87px;
-  // }
 
   &_payment {
     margin-top: 24px;
@@ -48,7 +40,7 @@
     display: block;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -59,7 +51,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       right: 0;
@@ -97,20 +89,12 @@
         border-bottom-width: 400px;
       }
     }
-
-    // &_payment {
-    //   margin-top: 87px;
-    // }
   }
 
   @media screen and (min-width: $screen-m-min) {
     &_links {
       column-gap: 25%;
     }
-
-    // &_domaine {
-    //   margin-bottom: 25px;
-    // }
   }
 
   @media screen and (min-width: $screen-l-min) {
