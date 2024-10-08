@@ -106,11 +106,7 @@ const Menu: FC<MenuProps> = (props) => {
           </div>
         </div>
       </header>
-      {isResponsiveMenuOpen ? (
-        <ResponsiveMenu className="show" />
-      ) : (
-        <ResponsiveMenu />
-      )}
+      {isResponsiveMenuOpen && <ResponsiveMenu className="show" />}
     </>
   );
 };

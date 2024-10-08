@@ -83,6 +83,13 @@
     color: $color-white;
     border: none;
     outline: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+      box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    }
 
     .site-icon {
       &::before {
