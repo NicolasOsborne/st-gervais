@@ -1,10 +1,38 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useEffect, useLayoutEffect, useState } from "react";
 
 export interface FooterProps {}
 
 const Footer: FC<FooterProps> = () => {
+  const [visaImageSrc, setVisaImageSrc] = useState("");
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth >= 740) {
+      setVisaImageSrc("images/visa-card-1.png");
+    } else {
+      setVisaImageSrc("images/visa-card-2.png");
+    }
+  }, [windowWidth]);
+
   return (
     <div className="uam_footer">
       <div className="uam_container">
@@ -39,7 +67,7 @@ const Footer: FC<FooterProps> = () => {
                     <Image
                       className="uam_footerPayment_logo"
                       alt="visa"
-                      src="images/visa-card-2.png"
+                      src={visaImageSrc}
                       width={42}
                       height={30}
                     />
