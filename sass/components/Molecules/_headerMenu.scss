@@ -56,6 +56,10 @@
         align-items: center;
         column-gap: 9px;
 
+        &:hover {
+          color: $color-orange;
+        }
+
         &::before {
           font-size: 12px;
           @include fontIcon();

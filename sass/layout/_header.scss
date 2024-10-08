@@ -66,7 +66,7 @@
       border-radius: 50%;
       width: 16px;
       height: 16px;
-      font-family: 'Nunito Sans', sans-serif;
+      font-family: "Nunito Sans", sans-serif;
       font-weight: 600;
       font-size: 10px;
       line-height: 16px;
@@ -89,9 +89,9 @@
       }
     }
   }
-  
+
   .label_name {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     font-weight: 400;
     font-size: 12px;
   }
@@ -123,13 +123,13 @@
     height: 80px;
   }
 
-  @media screen and (max-width: $screen-s-max) {
+  @media screen and (max-width: calc($screen-m - 0.5px)) {
     &_menu {
       display: none;
     }
   }
 
-  @media screen and (min-width: $screen-m-min) {
+  @media screen and (min-width: $screen-m) {
     &_nav {
       padding-bottom: 0;
       padding-right: 36px;

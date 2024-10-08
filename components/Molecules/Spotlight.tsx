@@ -16,7 +16,7 @@ const Spotlight: FC<SpotlightProps> = (props) => {
   const { name, tag, title, description, imageSrc, imageAlt, imageClassName } =
     props;
   return (
-    <div className="uam_spotlight">
+    <section className="uam_spotlight">
       <h4 className="uam_spotlight_name">{name}</h4>
       <div className="uam_spotlight_tag">{tag}</div>
       <h3 className="uam_spotlight_title">{title}</h3>
@@ -32,7 +32,7 @@ const Spotlight: FC<SpotlightProps> = (props) => {
         <Button buttonText="Voir l'offre" buttonColor="offer_button" />
         <Button buttonText="Toutes nos promos" buttonColor="discount_button" />
       </div>
-    </div>
+    </section>
   );
 };
 
