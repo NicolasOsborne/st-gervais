@@ -1,10 +1,37 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { FC } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import { FC, useEffect, useLayoutEffect, useState } from "react";
 
-export interface FooterProps { }
+export interface FooterProps {}
 
-const Footer: FC<FooterProps> = (props) => {
+const Footer: FC<FooterProps> = () => {
+  const [visaImageSrc, setVisaImageSrc] = useState("");
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth >= 740) {
+      setVisaImageSrc("images/visa-card-1.png");
+    } else {
+      setVisaImageSrc("images/visa-card-2.png");
+    }
+  }, [windowWidth]);
 
   return (
     <div className="uam_footer">
@@ -16,17 +43,17 @@ const Footer: FC<FooterProps> = (props) => {
                 <div className="uam_footerDomaine">
                   <div className="uam_footerDomaine_logo">
                     <Image
-                      src="images/Logo_entete_Blanc.png"
-                      alt='logo blanc'
+                      src="images/Logo.svg"
+                      alt="logo blanc"
                       width={116}
                       height={50}
                     />
                   </div>
                   <div className="uam_footerDomaine_description">
                     <p>
-                      <strong>Domaine Évasion Mont Revait</strong>,
-                      accès à Saint-Michel, Saint-Nicolas, Courchevel,
-                      Montgenèvre - Montgrandfont.
+                      <strong>Domaine Évasion Mont Revait</strong>, accès à
+                      Saint-Michel, Saint-Nicolas, Courchevel, Montgenèvre -
+                      Montgrandfont.
                     </p>
                   </div>
                 </div>
@@ -39,29 +66,29 @@ const Footer: FC<FooterProps> = (props) => {
                   <div className="uam_footerPayment_logoList">
                     <Image
                       className="uam_footerPayment_logo"
-                      alt='visa'
-                      src="images/visa-card-1.png"
+                      alt="visa"
+                      src={visaImageSrc}
                       width={42}
                       height={30}
                     />
                     <Image
                       className="uam_footerPayment_logo"
                       src="images/mastercard.png"
-                      alt='master card'
+                      alt="master card"
                       width={42}
                       height={30}
                     />
                     <Image
                       className="uam_footerPayment_logo"
                       src="images/american-express.png"
-                      alt='american express'
+                      alt="american express"
                       width={42}
                       height={30}
                     />
                     <Image
                       className="uam_footerPayment_logo"
                       src="images/paypal.png"
-                      alt='paypal'
+                      alt="paypal"
                       width={118}
                       height={30}
                     />
@@ -138,20 +165,28 @@ const Footer: FC<FooterProps> = (props) => {
           <div className="uam_footer_footer">
             <div className="uam_footerFooter">
               <div className="uam_footerFooter_socialNetworksLinks">
-                <Link href="#"><i className="site-facebook"></i></Link>
-                <Link href="#"><i className="site-Instagram"></i></Link>
+                <Link href="#">
+                  <i className="site-facebook"></i>
+                </Link>
+                <Link href="#">
+                  <i className="site-Instagram"></i>
+                </Link>
                 <Link href="#">
                   <i className="site-LinkedIn"></i>
                 </Link>
-                <Link href="#"><i className="site-Twitter"></i></Link>
-                <Link href="#"><i className="site-YouTube"></i></Link>
+                <Link href="#">
+                  <i className="site-Twitter"></i>
+                </Link>
+                <Link href="#">
+                  <i className="site-YouTube"></i>
+                </Link>
               </div>
               <div className="uam_footerFooter_line"></div>
               <div className="uam_footerFooter_copyright">
                 <span className="js-cookie extraBottom-cookie">
                   Paramétrez vos cookies
                 </span>
-                <span> Made with ♡ by Un autre monde </span>
+                <span> Made with ♡ by UAM 2022 </span>
               </div>
             </div>
           </div>

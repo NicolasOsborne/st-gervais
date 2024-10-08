@@ -1,39 +1,45 @@
 // Settings [no css generation]
 // @import '../utils/variables';
-@import 'setting/fonts';
-@import 'setting/variables';
+@import "setting/fonts";
+@import "setting/variables";
 
 // Tools [no css generation]
-@import 'Tools/mixins';
+@import "Tools/mixins";
 
 // Layout
-@import 'layout/header';
+@import "layout/header";
 
 //base
-@import 'base/reset';
-@import 'base/image';
-@import 'base/link';
+@import "base/reset";
+@import "base/image";
+@import "base/link";
 
 // - Atoms
-@import 'components/Atoms/headerLogo';
-@import 'components/Atoms/headerMenuIcon';
-@import 'components/Atoms/footerTitle';
+@import "components/Atoms/headerLogo";
+@import "components/Atoms/headerMenuIcon";
+@import "components/Atoms/footerTitle";
+@import "components/Atoms/offerCard";
+@import "components/Atoms/button";
 
 // - Molecules
-@import 'components/Molecules/headerMenu';
-@import 'components/Molecules/blockHeaderTitle';
-@import 'components/Molecules/footerDomaine';
-@import 'components/Molecules/footerPayment';
-@import 'components/Molecules/footerLinkList';
+@import "components/Molecules/headerMenu";
+@import "components/Molecules/responsiveMenu";
+@import "components/Molecules/blockHeaderTitle";
+@import "components/Molecules/offerList";
+@import "components/Molecules/spotlight";
+@import "components/Molecules/footerDomaine";
+@import "components/Molecules/footerPayment";
+@import "components/Molecules/footerLinkList";
 
 // - Organisms
-@import 'components/Organisms/footerLinks';
-@import 'components/Organisms/footerFooter';
+@import "components/Organisms/content";
+@import "components/Organisms/footerLinks";
+@import "components/Organisms/footerFooter";
 
 // - Template
-@import 'components/Template/blockHeader';
-@import 'components/Template/footer';
+@import "components/Template/blockHeader";
+@import "components/Template/footer";
 
 // Utilities
-@import 'Utilities/sortCode';
-@import 'Utilities/container';
+@import "Utilities/sortCode";
+@import "Utilities/container";

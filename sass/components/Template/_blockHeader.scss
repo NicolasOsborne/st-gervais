@@ -18,10 +18,11 @@
     width: 120%;
     height: 220%;
     background: rgba($color-white, 0.5);
-    transform: skewY(-70deg);
+    transform: skewY(-80deg);
   }
 
   &:after {
+    z-index: 1;
     bottom: -20%;
     left: 0;
     width: 100%;
@@ -31,7 +32,7 @@
       rgba($color-white, 0) -7%,
       $color-white 32%
     );
-    backdrop-filter: blur(10px);
+    filter: blur(10px);
     transform: skewY(20deg);
   }
 
@@ -44,6 +45,15 @@
     object-fit: cover;
     object-position: center;
     z-index: -1;
+  }
+
+  &_backgroundImageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
   }
 
   &_container {
@@ -69,8 +79,8 @@
   }
 
   &_title {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 60px;
+    padding-bottom: 152px;
     width: 608px;
     max-width: 100%;
   }
@@ -81,6 +91,11 @@
     #selectorv2 {
       bottom: 50px !important;
     }
+  }
+
+  &_offersWrapper {
+    position: relative;
+    z-index: 2;
   }
 
   .rpbox {
@@ -120,6 +135,13 @@
   }
 
   @media screen and (min-width: $screen-xs-min) {
+    &:before {
+      top: 45px;
+      right: -58%;
+      background: rgba($color-white, 0.5);
+      transform: skewY(-70deg);
+    }
+    
     &:after {
       bottom: -16%;
       height: 41%;
@@ -127,7 +149,7 @@
     }
 
     &_container {
-      padding-left: 50px;
+      padding-left: 0;
     }
 
     &_label {
@@ -143,8 +165,10 @@
 
     &_title {
       display: flex;
-      min-height: 675px;
+      min-height: 439px;
       align-items: center;
+      padding-top: 120px;
+      padding-bottom: 140px;
     }
 
     &-selector {
@@ -175,25 +199,48 @@
 
   @media screen and (min-width: $screen-s-min) {
     &:before {
-      top: -80px;
+      top: 50px;
       height: 120%;
       transform: skewY(-60deg);
     }
+
   }
 
   @media screen and (min-width: $screen-m-min) {
     &:before {
-      transform: skewY(-50deg);
+      transform: skewY(-60deg);
     }
 
-    &_container {
-      padding-left: 150px;
+    &_offersWrapper {
+      padding-left: 36px;
     }
   }
 
   @media screen and (min-width: $screen-l-min) {
     .rpbox {
       border-radius: 40px;
+    }
+
+    &_offersWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-left: 0;
+    }
+    
+    &_title {
+      margin-left: 105px;
+    }
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    &_offersWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      // padding-left: 0;
     }
   }
 }

@@ -8,23 +8,15 @@
   background-color: transparent;
   padding-bottom: 31px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 0px;
 
   &_container {
     position: relative;
     z-index: 2;
   }
 
-  &_content {
-    margin-bottom: 32px;
-  }
-
   &_information {
     margin-bottom: 36px;
-  }
-
-  &_domaine {
-    margin-bottom: 24px;
   }
 
   &_payment {
@@ -48,7 +40,7 @@
     display: block;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -59,7 +51,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       right: 0;
@@ -70,7 +62,7 @@
     }
   }
 
-  @media screen and (min-width: $screen-s-min) {
+  @media screen and (min-width: 700px) {
     text-align: left;
 
     &_content {
@@ -89,6 +81,7 @@
       display: flex;
       justify-content: flex-end;
       column-gap: 16px;
+      padding-top: 15px;
     }
 
     &_triangle {

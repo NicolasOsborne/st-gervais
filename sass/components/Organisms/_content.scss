@@ -1,0 +1,50 @@
+.uam_contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 151px 15px 190px 15px;
+  background: linear-gradient(
+    to bottom,
+    $color-grey-background 0%,
+    $color-white 50%,
+    $color-grey-background 100%
+  );
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 150px;
+    background-color: $color-white;
+    clip-path: polygon(100% 100%, 100% 0, 0 0, 100% 100%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: $color-white;
+    clip-path: polygon(100% 100%, 0 0, 0 0, 0 100%);
+  }
+
+  @media screen and (min-width: 740px) {
+    gap: 30px;
+    padding-top: 113px;
+    padding-bottom: 98px;
+  }
+
+  @media screen and (min-width: $screen-m) {
+    padding: 109px 0 183px 0;
+    margin-right: -100px;
+    margin-left: -100px;
+    gap: 0;
+  }
+}

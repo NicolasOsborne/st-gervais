@@ -1,0 +1,327 @@
+.uam_spotlight {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &_name {
+    font-family: $font-Montserrat;
+    @include fontStyle(800, 14px, 20px);
+    color: $color-blue;
+    text-transform: uppercase;
+  }
+
+  &_tag {
+    width: fit-content;
+    padding: 10px 20px;
+    color: $color-white;
+    background-color: $color-blue;
+    font-family: $font-Montserrat;
+    @include fontStyle(700, 16px, 22px);
+    margin-bottom: 10px;
+  }
+
+  &_title {
+    font-family: $font-Eagle;
+    @include fontStyle(700, 25px, 35px);
+    text-transform: uppercase;
+    max-width: 345px;
+  }
+
+  &_image_alignRight {
+    width: 360px;
+    height: 209px;
+    border-top-left-radius: 270px;
+    border-bottom-left-radius: 270px;
+    object-fit: cover;
+    object-position: 100% 80%;
+    margin-right: -15px;
+  }
+
+  &_image_alignLeft {
+    width: 360px;
+    height: 209px;
+    border-top-right-radius: 270px;
+    border-bottom-right-radius: 270px;
+    object-fit: cover;
+    object-position: 100% 80%;
+    margin-left: -15px;
+  }
+
+  &_description {
+    max-width: 484px;
+    font-family: $font-Montserrat;
+    @include fontStyle(400, 16px, 26px);
+    margin-bottom: 10px;
+  }
+
+  &_buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+    flex-wrap: wrap;
+    height: 45px;
+  }
+
+  &:first-child {
+    > * {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .uam_spotlight_buttonContainer {
+      justify-content: flex-end;
+    }
+  }
+
+  &:last-child {
+    .discount_button {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 370px) {
+    &_image_alignRight,
+    &_image_alignLeft {
+      max-width: calc(100vw - 15px);
+    }
+  }
+
+  @media screen and (min-width: 740px) {
+    display: grid;
+
+    &:first-child {
+      grid-template-columns: 1fr 362px;
+      grid-auto-rows: auto;
+
+      > * {
+        text-align: left;
+      }
+
+      .uam_spotlight_name {
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 0;
+      }
+
+      .uam_spotlight_tag {
+        grid-column: 1;
+        grid-row: 2;
+        margin-left: 0;
+      }
+
+      .uam_spotlight_title {
+        grid-column: 1;
+        grid-row: 3;
+        margin-left: 0;
+      }
+
+      .uam_spotlight_description {
+        grid-column: 1;
+        grid-row: 4;
+        margin-left: 0;
+      }
+
+      .uam_spotlight_buttonContainer {
+        grid-column: 1;
+        grid-row: 5;
+        margin-left: 0;
+        justify-content: flex-start;
+        margin-bottom: 60px;
+      }
+
+      .uam_spotlight_image_alignRight {
+        grid-column: 2;
+        grid-row: 3 / 6;
+        width: 362px;
+        height: 350px;
+        object-position: 100% 100%;
+      }
+    }
+
+    &:last-child {
+      grid-template-columns: 362px minmax(auto 484px);
+      grid-auto-rows: auto;
+
+      > * {
+        text-align: left;
+      }
+
+      .uam_spotlight_name {
+        grid-column: 3;
+        grid-row: 1;
+        margin-top: 59px;
+      }
+
+      .uam_spotlight_tag {
+        grid-column: 3;
+        grid-row: 2;
+      }
+
+      .uam_spotlight_title {
+        grid-column: 3;
+        grid-row: 3;
+      }
+
+      .uam_spotlight_description {
+        grid-column: 3;
+        grid-row: 4;
+      }
+
+      .uam_spotlight_buttonContainer {
+        grid-column: 3;
+        grid-row: 5;
+
+        .discount_button {
+          display: block;
+        }
+      }
+
+      .uam_spotlight_image_alignLeft {
+        grid-column: 1;
+        grid-row: 1 / 6;
+        width: 362px;
+        height: 350px;
+        object-position: 100% 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-m) {
+    &:first-child {
+      margin-left: 100px;
+    }
+
+    &:last-child {
+      margin-right: 100px;
+      grid-template-columns: 362px 1fr;
+    }
+  }
+
+  @media screen and (min-width: $screen-l) {
+    .uam_spotlight_name {
+      @include fontStyle(800, 16px, 20px);
+    }
+
+    .uam_spotlight_tag {
+      @include fontStyle(700, 20px, 32px);
+      height: 52px;
+    }
+
+    .uam_spotlight_title {
+      @include fontStyle(700, 35px, 45px);
+      max-width: 484px;
+    }
+
+    .uam_spotlight_description {
+      @include fontStyle(400, 22px, 32px);
+    }
+
+    .uam_button {
+      @include fontStyle(700, 18px, 25px);
+    }
+
+    &:first-child {
+      grid-template-columns: 1fr 710px;
+      margin-left: 100px;
+
+      .uam_spotlight_name {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .uam_spotlight_tag {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .uam_spotlight_title {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      .uam_spotlight_description {
+        grid-column: 1;
+        grid-row: 4;
+      }
+
+      .uam_spotlight_buttonContainer {
+        grid-column: 1;
+        grid-row: 5;
+        justify-content: flex-start;
+        margin-bottom: 60px;
+      }
+
+      .uam_spotlight_image_alignRight {
+        grid-column: 2;
+        grid-row: 3 / 6;
+        width: 710px;
+        height: 540px;
+        object-position: 100% 100%;
+      }
+    }
+
+    &:last-child {
+      grid-template-columns: 710px 1fr 484px;
+      margin-right: 100px;
+      margin-top: -20px;
+
+      .uam_spotlight_name {
+        grid-column: 3;
+        grid-row: 1;
+        margin-top: 59px;
+      }
+
+      .uam_spotlight_tag {
+        grid-column: 3;
+        grid-row: 2;
+      }
+
+      .uam_spotlight_title {
+        grid-column: 3;
+        grid-row: 3;
+        width: 484px;
+      }
+
+      .uam_spotlight_description {
+        grid-column: 3;
+        grid-row: 4;
+      }
+
+      .uam_spotlight_buttonContainer {
+        grid-column: 3;
+        grid-row: 5;
+
+        .discount_button {
+          display: none;
+        }
+      }
+
+      .uam_spotlight_image_alignLeft {
+        grid-column: 1;
+        grid-row: 1 / 6;
+        width: 710px;
+        height: 540px;
+        object-position: 100% 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    &:first-child {
+      margin-left: calc((100vw - 1270px) / 2);
+
+      .uam_spotlight_description {
+        max-width: 700px;
+      }
+    }
+
+    &:last-child {
+      grid-template-columns: 710px 1fr 700px;
+      margin-right: calc((100vw - 1270px) / 2);
+
+      .uam_spotlight_description {
+        max-width: 700px;
+      }
+    }
+  }
+}

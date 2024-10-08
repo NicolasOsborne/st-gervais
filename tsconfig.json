@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,6 +15,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "jsxImportSource": "react",
     "incremental": true,
     "plugins": [
       {
@@ -19,11 +24,21 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "~components/*": ["components/*"],
-      "~template/*": ["components/Template/*"],
-      "~organisms/*": ["components/Organisms/*"],
-      "~molecules/*": ["components/Molecules/*"],
-      "~atoms/*": ["components/Atoms/*"],
+      "~components/*": [
+        "components/*"
+      ],
+      "~template/*": [
+        "components/Template/*"
+      ],
+      "~organisms/*": [
+        "components/Organisms/*"
+      ],
+      "~molecules/*": [
+        "components/Molecules/*"
+      ],
+      "~atoms/*": [
+        "components/Atoms/*"
+      ]
     }
   },
   "include": [
@@ -33,5 +48,8 @@
     ".next/types/**/*.ts",
     "pages/**/*"
   ],
-  "exclude": ["node_modules", "pages/_document.js"]
+  "exclude": [
+    "node_modules",
+    "pages/_document.js"
+  ]
 }

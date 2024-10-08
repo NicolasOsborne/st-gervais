@@ -6,10 +6,16 @@
 
   &_link {
     color: $color-white;
-    @include fontSize(18px, 16px);
+    @include fontStyle(400, 18px, 26px);
 
     &:hover {
       color: $color-orange;
+    }
+  }
+
+  @media screen and (min-width: $screen-xs) {
+    &_link {
+      @include fontSize(16px, 26px);
     }
   }
 

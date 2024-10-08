@@ -1,0 +1,27 @@
+.uam_button {
+  padding: 10px 20px;
+  font-family: $font-Montserrat;
+  @include fontStyle(700, 16px, 25px);
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.offer_button {
+  color: $color-white;
+  background-color: $color-orange;
+}
+
+.discount_button {
+  color: $color-black;
+  background-color: $color-white;
+  border: 1px solid $color-black;
+  box-shadow: 2px 2px 4px 0px rgba(255, 255, 255, 0.2);
+}

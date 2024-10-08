@@ -7,8 +7,13 @@
 
   &_title {
     margin-bottom: 24px;
-    text-transform: uppercase;
   }
+
+  // @media screen and (min-width: $screen-xs) {
+  //   &_title {
+  //     text-transform: uppercase;
+  //   }
+  // }
 
   @media screen and (min-width: $screen-s-min) {
     margin-bottom: 0;
