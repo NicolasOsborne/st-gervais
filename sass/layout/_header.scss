@@ -28,6 +28,16 @@
   }
 
   &_local,
+  &_account,
+  &_cart {
+    cursor: pointer;
+
+    &:hover {
+      color: $color-orange;
+    }
+  }
+
+  &_local,
   &_account {
     display: flex;
     flex-direction: column;

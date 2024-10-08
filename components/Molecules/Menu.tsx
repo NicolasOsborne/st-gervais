@@ -1,11 +1,10 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { FC } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import { FC } from "react";
 
 export interface MenuProps {}
 
 const Menu: FC<MenuProps> = (props) => {
-
   return (
     <header className="uam_header">
       <div className="uam_header_nav">
@@ -18,12 +17,12 @@ const Menu: FC<MenuProps> = (props) => {
         <div className="uam_header_logo">
           <Link className="uam_headerLogo" href="#">
             <Image
-              src="/images/Logo_entete_Blanc.png"
-              alt='logo'
+              src="/images/Logo.svg"
+              alt="logo"
               className="img-responsive"
               width={116}
               height={50}
-              />
+            />
           </Link>
         </div>
         <div className="uam_header_menu">
@@ -36,19 +35,34 @@ const Menu: FC<MenuProps> = (props) => {
             <div className="uam_headerMenu_linkList">
               <ul className="uam_headerMenu_mainLink">
                 <li>
-                  <Link href="#" className="uam_headerMenuLink"> Domaine </Link>
+                  <Link href="#" className="uam_headerMenuLink">
+                    {" "}
+                    Domaine{" "}
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#" className="uam_headerMenuLink"> Infos Live </Link>
+                  <Link href="#" className="uam_headerMenuLink">
+                    {" "}
+                    Infos Live{" "}
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#" className="uam_headerMenuLink"> Webcams </Link>
+                  <Link href="#" className="uam_headerMenuLink">
+                    {" "}
+                    Webcams{" "}
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#" className="uam_headerMenuLink"> Tarifs </Link>
+                  <Link href="#" className="uam_headerMenuLink">
+                    {" "}
+                    Tarifs{" "}
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#" className="uam_headerMenuLink"> Débutants </Link>
+                  <Link href="#" className="uam_headerMenuLink">
+                    {" "}
+                    Débutants{" "}
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -59,25 +73,25 @@ const Menu: FC<MenuProps> = (props) => {
             <Image
               src="images/ball-fr.svg"
               className="lang_flag"
-              alt='fr' 
+              alt="fr"
               width={25}
               height={25}
-              />
+            />
             <span className="label_name">Langue</span>
           </div>
           <div className="uam_header_account">
-          <Image
+            <Image
               src="images/user.svg"
               className="lang_flag"
-              alt='user account' 
+              alt="user account"
               width={25}
               height={25}
-              />
+            />
             <span className="label_name"> Compte </span>
           </div>
           <div className="uam_header_cart">
             <span className="icon"></span>
-            <div className='cart_badge'>4</div>
+            <div className="cart_badge">4</div>
             <span className="label_name"> Panier </span>
           </div>
         </div>
