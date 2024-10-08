@@ -48,7 +48,7 @@
   }
 
   &_description {
-    max-width: 550px;
+    max-width: 484px;
     font-family: $font-Montserrat;
     @include fontStyle(400, 16px, 26px);
     margin-bottom: 10px;
@@ -139,7 +139,7 @@
     }
 
     &:last-child {
-      grid-template-columns: 362px 1fr minmax(auto 550px);
+      grid-template-columns: 362px minmax(auto 484px);
       grid-auto-rows: auto;
 
       > * {
@@ -193,6 +193,7 @@
 
     &:last-child {
       margin-right: 100px;
+      grid-template-columns: 362px 1fr;
     }
   }
 
@@ -260,7 +261,7 @@
     }
 
     &:last-child {
-      grid-template-columns: 710px 1fr 550px;
+      grid-template-columns: 710px 1fr 484px;
       margin-right: 100px;
       margin-top: -20px;
 
@@ -284,7 +285,6 @@
       .uam_spotlight_description {
         grid-column: 3;
         grid-row: 4;
-        max-width: 100%;
       }
 
       .uam_spotlight_buttonContainer {
